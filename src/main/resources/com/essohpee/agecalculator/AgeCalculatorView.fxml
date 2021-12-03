@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="417.0" prefWidth="600.0" style="-fx-background-color: #e5fcc2;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.essohpee.agecalculator.AgeCalculatorController">
+   <children>
+      <AnchorPane prefHeight="71.0" prefWidth="600.0" style="-fx-background-color: #9de0ad;">
+         <children>
+            <Label layoutX="180.0" layoutY="14.0" text="Age Calculator" textFill="#594f4f">
+               <font>
+                  <Font name="Book Antiqua" size="36.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="46.0" fitWidth="68.0" layoutX="439.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Img/calendar.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Label layoutX="79.0" layoutY="111.0" text="Date of Birth">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="79.0" layoutY="172.0" text="Current Date">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="dateOfBirthPicker" layoutX="183.0" layoutY="101.0" prefHeight="35.0" prefWidth="225.0" style="-fx-background-color: #9de0ad;" />
+      <DatePicker fx:id="currentDatePicker" layoutX="185.0" layoutY="161.0" prefHeight="35.0" prefWidth="225.0" promptText=" " style="-fx-background-color: #9de0ad;" />
+      <JFXButton buttonType="RAISED" layoutX="220.0" layoutY="214.0" onAction="#CalcAction" prefHeight="45.0" prefWidth="159.0" style="-fx-background-color: #9de0ad;" text="Calculate" textFill="#594f4f">
+         <font>
+            <Font size="21.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label layoutX="22.0" layoutY="316.0" text="Your Age is:" textFill="#594f4f">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <VBox alignment="TOP_CENTER" layoutX="170.0" layoutY="297.0" prefHeight="84.0" prefWidth="100.0" style="-fx-background-color: #9de0ad;">
+         <effect>
+            <DropShadow height="9.32" radius="4.16" width="9.32" />
+         </effect>
+         <children>
+            <Label prefHeight="27.0" prefWidth="48.0" text="Years" textAlignment="CENTER">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="yearLabel" alignment="CENTER" layoutX="36.0" layoutY="10.0" prefHeight="46.0" prefWidth="47.0" text=" " textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox alignment="TOP_CENTER" layoutX="297.0" layoutY="297.0" prefHeight="84.0" prefWidth="100.0" style="-fx-background-color: #9de0ad;">
+         <effect>
+            <DropShadow height="9.32" radius="4.16" width="9.32" />
+         </effect>
+         <children>
+            <Label prefHeight="27.0" prefWidth="57.0" text="Month" textAlignment="CENTER">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="monthLabel" alignment="CENTER" prefHeight="46.0" prefWidth="47.0" text=" " textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox alignment="TOP_CENTER" layoutX="424.0" layoutY="297.0" prefHeight="84.0" prefWidth="100.0" style="-fx-background-color: #9de0ad;">
+         <effect>
+            <DropShadow height="9.32" radius="4.16" width="9.32" />
+         </effect>
+         <children>
+            <Label prefHeight="27.0" prefWidth="34.0" text="Day" textAlignment="CENTER">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="daysLabel" alignment="CENTER" prefHeight="46.0" prefWidth="47.0" text=" " textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <Label layoutX="10.0" layoutY="400.0" text="Designed and Developed by: Samuel O. Pelham ©" />
+   </children>
+</AnchorPane>
